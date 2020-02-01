@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:latihan/login.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,28 +10,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: LoginApp(),
-      theme: ThemeData(primarySwatch: Colors.pink),
-    );
-  }
-}
-
-class LoginApp extends StatefulWidget {
-  @override
-  _LoginAppState createState() => _LoginAppState();
-}
-
-class _LoginAppState extends State<LoginApp> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: ListView(
-        children: <Widget>[
-          Center(
-              child: Text("okay",
-                  style: TextStyle(fontSize: 50, color: Colors.white)))
-        ],
-      ),
+      theme: ThemeData(
+          primarySwatch: Colors.brown,
+          textTheme: GoogleFonts.latoTextTheme(Theme.of(context).textTheme)),
     );
   }
 }
