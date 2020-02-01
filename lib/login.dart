@@ -1,5 +1,7 @@
+
 import 'package:flutter/material.dart';
 import 'package:latihan/layout.dart';
+import 'package:latihan/signup.dart';
 
 class LoginApp extends StatelessWidget {
   @override
@@ -11,7 +13,7 @@ class LoginApp extends StatelessWidget {
         decoration: BoxDecoration(
             gradient: LinearGradient(
           begin: Alignment.bottomRight,
-          colors: <Color>[Colors.blue[900], Colors.blue[300], Colors.blue[700]],
+          colors: <Color>[Colors.blue[900], Colors.blue[500], Colors.blue[800]],
         )),
         child: ListView(children: <Widget>[
           Column(
@@ -25,20 +27,24 @@ class LoginApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   GestureDetector(
-                    child: Text("  Masuk",
+                    child: Text("Masuk",
                         style: TextStyle(
                           fontSize: 50,
                         )),
                     onTap: () {
-                      print("Masuk");
+                      Navigator.push(context, MaterialPageRoute(builder: (context){
+                        return LoginApp();
+                      }));
                     },
                   ),
                   GestureDetector(
-                    child: Text("Daftar  ",
+                    child: Text("Daftar",
                         style:
                             TextStyle(fontSize: 30, color: Colors.grey[800])),
                     onTap: () {
-                      print("Daftar");
+                      Navigator.push(context, MaterialPageRoute(builder: (context){
+                        return SignupApp();
+                      }));
                     },
                   )
                 ],
@@ -55,7 +61,7 @@ class LoginApp extends StatelessWidget {
                 height: SizeConfig.blockVertical * 3,
               ),
               Container(
-                padding: EdgeInsets.only(left: 100, right: 100),
+                padding: EdgeInsets.only(left: 80, right: 80),
                 child: TextField(
                     decoration: InputDecoration(
                   hintText: "Alamat Email",
@@ -66,7 +72,7 @@ class LoginApp extends StatelessWidget {
                 height: SizeConfig.blockVertical * 5,
               ),
               Container(
-                padding: EdgeInsets.only(left: 100, right: 100),
+                padding: EdgeInsets.only(left: 80, right: 80),
                 child: TextField(
                     obscureText: true,
                     decoration: InputDecoration(
@@ -87,6 +93,24 @@ class LoginApp extends StatelessWidget {
                     color: Colors.blue[800],
                     child: Text(
                       "Masuk",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    elevation: 10,
+                    onPressed: () {}),
+              ),
+              SizedBox(
+                height: SizeConfig.blockVertical * 5,
+              ),
+              Center(
+                child: RaisedButton(
+                    padding: EdgeInsets.only(
+                        left: SizeConfig.blockHorizontal * 18,
+                        right: SizeConfig.blockHorizontal * 18,
+                        top: SizeConfig.blockVertical * 2,
+                        bottom: SizeConfig.blockVertical * 2),
+                    color: Colors.blue[800],
+                    child: Text(
+                      "Anonim",
                       style: TextStyle(fontSize: 20),
                     ),
                     elevation: 10,
