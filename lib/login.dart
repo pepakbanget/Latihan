@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:latihan/layout.dart';
 import 'package:latihan/signup.dart';
@@ -32,7 +31,8 @@ class LoginApp extends StatelessWidget {
                           fontSize: 50,
                         )),
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context){
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
                         return LoginApp();
                       }));
                     },
@@ -42,7 +42,8 @@ class LoginApp extends StatelessWidget {
                         style:
                             TextStyle(fontSize: 30, color: Colors.grey[800])),
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context){
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
                         return SignupApp();
                       }));
                     },
@@ -64,7 +65,8 @@ class LoginApp extends StatelessWidget {
                 padding: EdgeInsets.only(left: 80, right: 80),
                 child: TextField(
                     decoration: InputDecoration(
-                  hintText: "Alamat Email",
+                  border: OutlineInputBorder(),
+                  labelText: "Alamat Email",
                   prefixIcon: Icon(Icons.mail),
                 )),
               ),
@@ -76,7 +78,8 @@ class LoginApp extends StatelessWidget {
                 child: TextField(
                     obscureText: true,
                     decoration: InputDecoration(
-                      hintText: "Kata Sandi",
+                      border: OutlineInputBorder(),
+                      labelText: "Kata Sandi",
                       prefixIcon: Icon(Icons.lock),
                     )),
               ),

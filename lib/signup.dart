@@ -63,7 +63,8 @@ class SignupApp extends StatelessWidget {
                 padding: EdgeInsets.only(left: 80, right: 80),
                 child: TextField(
                     decoration: InputDecoration(
-                  hintText: "Alamat Email",
+                  border: OutlineInputBorder(),
+                  labelText: "Alamat Email",
                   prefixIcon: Icon(Icons.mail),
                 )),
               ),
@@ -75,7 +76,8 @@ class SignupApp extends StatelessWidget {
                 child: TextField(
                     obscureText: true,
                     decoration: InputDecoration(
-                      hintText: "Kata Sandi",
+                      border: OutlineInputBorder(),
+                      labelText: "Kata Sandi",
                       prefixIcon: Icon(Icons.lock),
                     )),
               ),
@@ -87,7 +89,8 @@ class SignupApp extends StatelessWidget {
                 child: TextField(
                     obscureText: true,
                     decoration: InputDecoration(
-                      hintText: "Kata Sandi",
+                      border: OutlineInputBorder(),
+                      labelText: "Kata Sandi",
                       prefixIcon: Icon(Icons.lock),
                     )),
               ),
