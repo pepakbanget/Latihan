@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:latihan/layout.dart';
-import 'package:latihan/login.dart';
+import 'package:latihan/pages/layout.dart';
+import 'package:latihan/pages/signup.dart';
 
-class SignupApp extends StatelessWidget {
+class LoginApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -28,10 +28,11 @@ class SignupApp extends StatelessWidget {
                   GestureDetector(
                     child: Text("Masuk",
                         style: TextStyle(
-                          fontSize: 30, color: Colors.grey[800]
+                          fontSize: 50,
                         )),
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context){
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
                         return LoginApp();
                       }));
                     },
@@ -39,9 +40,10 @@ class SignupApp extends StatelessWidget {
                   GestureDetector(
                     child: Text("Daftar",
                         style:
-                            TextStyle(fontSize: 50)),
+                            TextStyle(fontSize: 30, color: Colors.grey[800])),
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context){
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
                         return SignupApp();
                       }));
                     },
@@ -69,20 +71,7 @@ class SignupApp extends StatelessWidget {
                 )),
               ),
               SizedBox(
-                height: SizeConfig.blockVertical * 2,
-              ),
-              Container(
-                padding: EdgeInsets.only(left: 80, right: 80),
-                child: TextField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: "Kata Sandi",
-                      prefixIcon: Icon(Icons.lock),
-                    )),
-              ),
-              SizedBox(
-                height: SizeConfig.blockVertical * 2,
+                height: SizeConfig.blockVertical * 5,
               ),
               Container(
                 padding: EdgeInsets.only(left: 80, right: 80),
@@ -106,7 +95,25 @@ class SignupApp extends StatelessWidget {
                         bottom: SizeConfig.blockVertical * 2),
                     color: Colors.blue[800],
                     child: Text(
-                      "Daftar",
+                      "Masuk",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    elevation: 10,
+                    onPressed: () {}),
+              ),
+              SizedBox(
+                height: SizeConfig.blockVertical * 5,
+              ),
+              Center(
+                child: RaisedButton(
+                    padding: EdgeInsets.only(
+                        left: SizeConfig.blockHorizontal * 18,
+                        right: SizeConfig.blockHorizontal * 18,
+                        top: SizeConfig.blockVertical * 2,
+                        bottom: SizeConfig.blockVertical * 2),
+                    color: Colors.blue[800],
+                    child: Text(
+                      "Anonim",
                       style: TextStyle(fontSize: 20),
                     ),
                     elevation: 10,
